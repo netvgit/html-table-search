@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<style type="text/css">
+			table{
+				width:100%;
+			}
+			table, th, td{
+				border:solid 1px gray;
+			}
+		</style>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="html-table-search.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('table.search-table').tableSearch();
+			});
+		</script>
+	</head>
+	<body>
+		<div>Just another div above table</div>
+		<table class="search-table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Gender</th>
+					<th>DOB</th>
+					<th>Class</th>
+					<th>English</th>
+					<th>Maths</th>
+					<th>Science</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Allen</td>
+					<td>Male</td>
+					<td>11 Jan, 1999</td>
+					<td>VI</td>
+					<td>98</td>
+					<td>76</td>
+					<td>86</td>
+				</tr>
+				<tr>
+					<td>James Mark</td>
+					<td>Male</td>
+					<td>30 Aug, 2001</td>
+					<td>IV</td>
+					<td>70</td>
+					<td>79</td>
+					<td>89</td>
+				</tr>
+				<tr>
+					<td>Christine Augilera</td>
+					<td>Female</td>
+					<td>01 Mar, 2003</td>
+					<td>II</td>
+					<td>90</td>
+					<td>75</td>
+					<td>80</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+<html>
