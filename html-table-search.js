@@ -1,11 +1,18 @@
+/**
+	**options to have following keys:
+		**searchText: this should hold the value of search text
+		**searchPlaceHolder: this should hold the value of search input box placeholder
+**/
 (function($){
 	$.fn.tableSearch = function(options){
 		if(!$(this).is('table')){
 			return;
 		}
 		var tableObj = $(this),
-			divObj = $('<div style="float:right;">Search: </div><br /><br />'),
-			inputObj = $('<input type="text" />');
+			searchText = (options.searchText)?options.searchText:'Search: ',
+			searchPlaceHolder = (options.searchPlaceHolder)?options.searchPlaceHolder:'',
+			divObj = $('<div style="float:right;">'+searchText+'</div><br /><br />'),
+			inputObj = $('<input type="text" placeholder="'+searchPlaceHolder+'" />');
 		inputObj.off('keyup').on('keyup', function(){
 			var searchFieldVal = $(this).val();
 			tableObj.find('tbody tr').hide().each(function(){

@@ -12,7 +12,10 @@
 		<script type="text/javascript" src="html-table-search.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$('table.search-table').tableSearch();
+				$('table.search-table').tableSearch({
+					searchText:'Search Table',
+					searchPlaceHolder:'Input Value'
+				});
 			});
 		</script>
 	</head>
